@@ -1,6 +1,6 @@
 {
   "name": "hexo-podcast-rss",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Podcast feed generator plugin for Hexo",
   "main": "index",
   "scripts": {
@@ -18,7 +18,7 @@
     "rss2.xml"
   ],
   "repository": "hexo-podcast-rss",
-  "homepage": "https://hexo.io/",
+  "homepage": "https://github.com/wnwd/hexo-podcast-rss",
   "keywords": [
     "hexo",
     "rss",
