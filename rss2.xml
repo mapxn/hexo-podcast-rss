@@ -22,7 +22,13 @@
     {% for post in posts.toArray() %}
     <item>
       <title>{{ post.title }}</title>
-      <description>节目原文: {{ post.permalink | uriencode }}</description>
+      <description>
+        <content type="html">
+            <![CDATA[<p data-flag="normal" style="font-size:16px;line-height:30px;font-family:Helvetica,Arial,sans-serif;color:#333333;word-break:break-all;font-weight:normal;"><span>{{ config.feed.description }}</span>
+            <br>本期节目👉 <a href="{{ post.permalink }}">阅读原文</a>
+            </p>]]>
+        </content>
+      </description>
       <pubDate>{{ post.date.toDate().toUTCString() }}</pubDate>
       <enclosure url="{{ post.media }}" type="{{ post.type }}" length="{{ post.length }}"/>
       <itunes:duration>{{ post.duration }}</itunes:duration>
